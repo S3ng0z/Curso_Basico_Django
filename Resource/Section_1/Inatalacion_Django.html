@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-ES"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8"> <title>instalardjango.com | Videotutoriales para desarrollar con Django en entornos virtuales.</title><meta name="generator" content="Jekyll v3.8.5"><meta property="og:title" content="instalardjango.com"><meta name="author" content="Hektor Profe."><meta property="og:locale" content="en_US"><meta name="description" content="Videotutoriales de instalación y creación de entornos virtuales vía Conda para instalar Django Framework fácilmente en Windows, GNU/Linux y Mac OS X."><meta property="og:description" content="Videotutoriales de instalación y creación de entornos virtuales vía Conda para instalar Django Framework fácilmente en Windows, GNU/Linux y Mac OS X."><link rel="canonical" href="https://hcosta.github.io/instalardjango.com/"><meta property="og:url" content="https://hcosta.github.io/instalardjango.com/"><meta property="og:site_name" content="instalardjango.com"> <script type="application/ld+json"> {"@type":"WebSite","headline":"instalardjango.com","url":"https://hcosta.github.io/instalardjango.com/","name":"instalardjango.com","author":{"@type":"Person","name":"Hektor Profe."},"description":"Videotutoriales de instalación y creación de entornos virtuales vía Conda para instalar Django Framework fácilmente en Windows, GNU/Linux y Mac OS X.","@context":"http://schema.org"}</script> <meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#157878"><link href="Inatalacion_Django_files/css.css" rel="stylesheet" type="text/css"><link rel="stylesheet" href="Inatalacion_Django_files/style.css"><link rel="shortcut icon" type="image/x-icon" href="https://hcosta.github.io/instalardjango.com/favicon.ico"> <script> var host = "https://hcosta.github.io".replace(/http(s)?:\/\//g, ""); if ((host == window.location.host) && (window.location.protocol != "https:")) { window.location.protocol = "https"; } </script></head><body><section class="page-header"><h1>instalardjango.com</h1><h2 class="project-tagline">Videotutoriales para desarrollar con Django en entornos virtuales.</h2><a href="https://hcosta.github.io/instalardjango.com/" class="btn">Instalar Django en entorno Conda</a> <a href="https://hcosta.github.io/instalardjango.com/visualstudiocode/" class="btn">Utilizar Django en Visual Studio Code</a></section><section class="main-content"><style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; margin-bottom: 1rem; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><h2 id="instalar-django-fácilmente-en-entorno-virtual-conda">Instalar Django fácilmente en entorno virtual Conda</h2><p>Instalar Django en un entorno virtual nunca había sido tan fácil gracias a <strong><em>Conda</em></strong>,
+ un gestor de paquetes y entornos para multitud de lenguajes (Python, R,
+ Ruby, Lua, Scala, Java, JavaScript, C/ C++, FORTRAN). En este 
+videotutorial te enseñaré a instalar conda con <strong><em>Miniconda</em></strong>, a crear tu primer entorno virtual y a instalar Django de una forma cómoda y sencilla.</p><p>Si tienes algún problema durante la instalación <a href="https://github.com/hcosta/instalardjango.com/issues" target="_blank">ábreme un ticket</a> y lo verificamos.</p><p><strong><em>NOTA</em></strong>: <em>Si
+ dispones de Anaconda no es necesario instalar Miniconda, pues es una 
+versión ligera del mismo programa. Puedes saltarte la instalación e ir 
+directamente al paso de crear el entorno virtual.</em></p><h2 id="selecciona-tu-sistema-operativo">Selecciona tu sistema operativo</h2><div style="text-align:center;"> <a href="#win7"><img src="Inatalacion_Django_files/Logo_Windows_7.png"></a> <a href="#win10"><img src="Inatalacion_Django_files/Logo_Windows_10.png"></a> <a href="#mac"><img src="Inatalacion_Django_files/Logo_MacOS.png"></a> <a href="#linux"><img src="Inatalacion_Django_files/Logo_Linux.png"></a></div><p><a name="win7"></a></p><h3 id="windows-7">Windows 7</h3><div class="embed-container"><iframe src="Inatalacion_Django_files/254702022.html" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe></div><h4 id="chuleta-de-comandos-en-windows-7">Chuleta de comandos en Windows 7</h4><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Consultar la versión de Python por defecto</span>
+python <span class="nt">-V</span>
+
+<span class="c"># Crear entorno Conda vacío con Python 3.7</span>
+conda create <span class="nt">-n</span> django2 <span class="nv">python</span><span class="o">==</span>3.7 <span class="nv">sqlite</span><span class="o">==</span>3.25.3
+
+<span class="c"># Activar el entorno virtual</span>
+activate django2
+
+<span class="c"># Listar los paquetes instalados en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip list
+
+<span class="c"># Instalar Django en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip install django  <span class="c"># se puede instalar cualquier versión con django==2.0.2 o la que sea</span>
+
+<span class="c"># Crear un proyecto de Django</span>
+<span class="o">(</span>django2<span class="o">)</span> django-admin startproject proyecto
+
+<span class="c"># Desinstalar Django del entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip uninstall django
+
+<span class="c"># Desactivar el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> deactivate
+</code></pre></div></div><p><a name="win10"></a></p><h3 id="windows-10">Windows 10</h3><div class="embed-container"><iframe src="Inatalacion_Django_files/254713961.html" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe></div><h4 id="chuleta-de-comandos-en-windows-10">Chuleta de comandos en Windows 10</h4><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Consultar la versión de Python por defecto</span>
+python <span class="nt">-V</span>
+
+<span class="c"># Crear entorno Conda vacío con Python 3.7</span>
+conda create <span class="nt">-n</span> django2 <span class="nv">python</span><span class="o">==</span>3.7 <span class="nv">sqlite</span><span class="o">==</span>3.25.3
+
+<span class="c"># Activar el entorno virtual</span>
+activate django2
+
+<span class="c"># Listar los paquetes instalados en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip list
+
+<span class="c"># Instalar Django en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip install django  <span class="c"># se puede instalar cualquier versión con django==2.0.2 o la que sea</span>
+
+<span class="c"># Crear un proyecto de Django</span>
+<span class="o">(</span>django2<span class="o">)</span> django-admin startproject proyecto
+
+<span class="c"># Desinstalar Django del entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip uninstall django
+
+<span class="c"># Desactivar el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> deactivate
+</code></pre></div></div><p><a name="mac"></a></p><h3 id="macos-x">MacOS X</h3><div class="embed-container"><iframe src="Inatalacion_Django_files/254727538.html" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe></div><h4 id="chuleta-de-comandos-en-macos-x">Chuleta de comandos en MacOS X</h4><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Consultar la versión de Python por defecto</span>
+python <span class="nt">-V</span>
+
+<span class="c"># Instalar un script bash del directorio actual</span>
+sh ./script.sh
+
+<span class="c"># Inyectar la nueva configuración en el .bash_profile</span>
+<span class="nb">source</span> ~/.bash_profile
+
+<span class="c"># Crear entorno Conda vacío con Python 3.7</span>
+conda create <span class="nt">-n</span> django2 <span class="nv">python</span><span class="o">==</span>3.7 <span class="nv">sqlite</span><span class="o">==</span>3.25.3
+
+<span class="c"># Activar el entorno virtual</span>
+<span class="nb">source </span>activate django2
+
+<span class="c"># Listar los paquetes instalados en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip list
+
+<span class="c"># Instalar Django en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip install django  <span class="c"># se puede instalar cualquier versión con django==2.0.2 o la que sea</span>
+
+<span class="c"># Crear un proyecto de Django</span>
+<span class="o">(</span>django2<span class="o">)</span> django-admin startproject proyecto
+
+<span class="c"># Desinstalar Django del entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip uninstall django
+
+<span class="c"># Desactivar el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> <span class="nb">source </span>deactivate
+</code></pre></div></div><p><a name="linux"></a></p><h3 id="gnulinux">GNU/Linux</h3><div class="embed-container"><iframe src="Inatalacion_Django_files/254740303.html" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe></div><h4 id="chuleta-de-comandos-en-gnulinux">Chuleta de comandos en GNU/Linux</h4><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Consultar la versión de Python por defecto</span>
+python <span class="nt">-V</span>
+
+<span class="c"># Instalar un script bash del directorio actual</span>
+sh ./script.sh
+
+<span class="c"># Inyectar la nueva configuración en el .bashrc</span>
+<span class="nb">source</span> ~/.bashrc
+
+<span class="c"># Crear entorno Conda vacío con Python 3.7</span>
+conda create <span class="nt">-n</span> django2 <span class="nv">python</span><span class="o">==</span>3.7 <span class="nv">sqlite</span><span class="o">==</span>3.25.3
+
+<span class="c"># Activar el entorno virtual</span>
+<span class="nb">source </span>activate django2
+
+<span class="c"># Listar los paquetes instalados en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip list
+
+<span class="c"># Instalar Django en el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip install django  <span class="c"># se puede instalar cualquier versión con django==2.0.2 o la que sea</span>
+
+<span class="c"># Crear un proyecto de Django</span>
+<span class="o">(</span>django2<span class="o">)</span> django-admin startproject proyecto
+
+<span class="c"># Desinstalar Django del entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> pip uninstall django
+
+<span class="c"># Desactivar el entorno virtual</span>
+<span class="o">(</span>django2<span class="o">)</span> <span class="nb">source </span>deactivate
+</code></pre></div></div><h2 id="necesitas-un-ide-para-python-y-django">¿Necesitas un IDE para Python y Django?</h2><p><a href="https://hcosta.github.io/instalardjango.com/visualstudiocode/">Aquí encontrarás</a> un videotutorial de configuración paso a paso para <strong>Visual Studio Code</strong>, mi entorno de trabajo recomendado.</p><footer class="site-footer"> <span class="site-footer-credits">Esta <a href="https://github.com/hcosta/instalardjango.com">página</a> es un proyecto público de <a href="https://www.hektorprofe.net/">Hektor Profe</a> para sus alumnos en <a href="https://www.udemy.com/user/hctorcostaguzmn/">Udemy</a>, generado con <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</span></footer></section>
+</body></html>
